@@ -1,0 +1,38 @@
+<!--pages/goods/goods.wxml-->
+<import src="../../components/vtu/template/shop/template.wxml"></import>
+
+<view class="page-section page-section-spacing swiper">
+  <swiper
+    bindchange="bindchange" 
+    indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+    interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+    <block wx:for="{{urls}}" wx:key="*this">
+      <swiper-item>
+        <image class="weui-uploader__img" src="{{item}}" bindtap="preview" data-src="{{item}}"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <span class="swiper_page" >{{current}}/{{urls.length}}</span>
+</view>
+
+<view class="goods_body">
+  <view class="base_info">
+    <view class="vtu-shopList-label">
+      <span class="bg-olive">自营</span>
+      <span class="title">二手冰箱特价，省电，够冻，静音，多功能</span>
+    </view>
+    <view class="vtu-shopList-price">
+      <view class="vtu-shopList-price-d">￥<font>299.80</font></view>
+      <view class="vtu-shopList-price-s">￥599</view>
+    </view>
+  </view>
+  
+  <view class="shop_info">
+    <view class="shop_label">商品简介</view>
+    <text class="shop_text">2020年新款，9成新，刚买不久12月份买的，但家里放不下就决定出售了</text>
+  </view>
+</view>
+
+<view class="buy_bottom">
+  <template is="buyBar_style1" data="{{go_url:'/pages/purchase/purchase'}}" />
+</view>

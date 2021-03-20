@@ -1,0 +1,52 @@
+/* pages/details/details.wxss */
+.cell_item{
+  border-bottom: 1rpx solid #eee;
+  padding: 10rpx;
+  margin: 10rpx;
+  font-size: 34rpx;
+}
+
+.image_item{
+  width: 220rpx;
+  height: 200rpx;
+  margin: 10rpx;
+  
+}
+
+.tag_item{
+  color: white;
+  padding:5rpx 10rpx;
+  font-size:30rpx;
+  border-radius: 10rpx;
+}
+
+.tag_red{
+  background-color: red;
+}
+
+.tag_orange{
+  background-color: orange;
+}
+
+.tag_darkgray{
+  background-color: darkgray;
+}
+
+.tag_LimeGreen{
+  background-color: LimeGreen;
+}
+
+.tag_green{
+  background-color: green;
+}
+
+#btnBlock{
+  width: 850rpx !important;
+  margin-left: 160rpx;
+}
+
+#btnid button {
+  width: 350rpx !important;
+  margin:10rpx;
+}
+  

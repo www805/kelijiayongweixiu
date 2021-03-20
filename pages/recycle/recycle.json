@@ -1,0 +1,16 @@
+{
+  "usingComponents": {
+    "vtu-input": "/components/vtu/input/item/vtu-input",
+    "vtu-input-group": "/components/vtu/input/group/vtu-input-group",
+    "vtu-imgPicker": "/components/vtu/imgPicker/vtu-imgPicker",
+    "vtu-radio": "/components/vtu/radio/radio/vtu-radio",
+    "vtu-radio-prop": "/components/vtu/prop/radio/prop/vtu-radio-prop",
+    "vtu-radio-prop-item": "/components/vtu/prop/radio/item/vtu-radio-prop-item",
+    "vtu-btn": "/components/vtu/button/vtu-btn",
+    "vtu-noticeBar": "/components/vtu/noticeBar/vtu-noticeBar",
+
+    "wux-date-picker": "/components/wux/date-picker/index",
+    "wux-cell": "/components/wux/cell/index"
+  },
+  "navigationBarTitleText": "填写电器回收单"
+}

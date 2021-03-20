@@ -1,0 +1,14 @@
+{
+  "usingComponents": {
+    "vtu-panel": "/components/vtu/panel/vtu-panel",
+    "vtu-cell": "/components/vtu/cell/item/vtu-cell",
+    "vtu-switch": "/components/vtu/switch/vtu-switch",
+    "vtu-sheet": "/components/vtu/sheet/vtu-sheet",
+    "vtu-btn": "/components/vtu/button/vtu-btn",
+    "vtu-input": "/components/vtu/input/item/vtu-input",
+    "vtu-input-group": "/components/vtu/input/group/vtu-input-group",
+    "vtu-radio-prop": "/components/vtu/prop/radio/prop/vtu-radio-prop",
+    "vtu-radio-prop-item": "/components/vtu/prop/radio/item/vtu-radio-prop-item"
+  },
+  "navigationBarTitleText": "确认订单"
+}

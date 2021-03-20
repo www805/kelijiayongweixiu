@@ -1,0 +1,68 @@
+/**index.wxss**/
+@import "../../assets/icons/ali.wxss";
+@import "../../components/vtu/template/other/template.wxss";
+@import "../../components/vtu/template/shop/template.wxss";
+
+.btn1 {
+  margin-top: 20rpx;
+  color: white;
+  border-radius: 98rpx;
+}
+.layoutSpan{
+  background-color: #eee;
+  height: 80rpx;
+  margin:10rpx;
+}
+
+.placeholder{
+  background-color: #eee;
+  height: 80rpx;
+  margin: 10rpx;
+  
+}
+
+.baoxiu_item{
+  text-align: center;
+  line-height: 100rpx;
+  color: white;
+  background-color: #FF8C00;
+  border-radius: 20rpx;
+  margin: 15rpx 20rpx;
+}
+
+.baoxiu{
+  height:418rpx;
+  text-align: center;
+  line-height: 400rpx;
+  color: white;
+  background-color: #FF8C00;
+  border-radius: 20rpx;
+}
+
+
+.chaxun{
+  height:200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color: white;
+  background-color: #40A4D6;
+  border-radius: 20rpx;
+}
+
+.huishou{
+  height:200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  color: white;
+  background-color: #98D5B3;
+  border-radius: 20rpx;
+}
+
+.vtu-title3-label{
+  padding-left: 15px;
+}
+.vtu-shopList.infeed .vtu-shopList-image{
+  padding-left: 10px;
+  padding-top: 10px;
+  width: 110px;
+}

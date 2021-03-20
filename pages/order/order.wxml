@@ -1,0 +1,43 @@
+<view class="page-body">
+  <form catchsubmit="formSubmit" catchreset="formReset">
+    <vtu-input-group >
+      <vtu-input must border placeholder="请具体描述下报修的问题" value="" type="textarea" text-align="left" text-height="100px" show-max-label="{{true}}" maxlength="1000" >
+      </vtu-input>
+
+      <view style="padding:20rpx">
+        <vtu-imgPicker count="9" list="{{imgList}}"> </vtu-imgPicker>
+      </view>
+
+      <vtu-input title="姓名" must  placeholder="请输入联系人姓名" message="姓名不能为空！error" status="" value="" type="input" text-align="left" ></vtu-input>
+
+      <vtu-input title="手机号" must placeholder="请输入联系手机号" type="input" text-align="left" ></vtu-input>
+
+      <wux-date-picker style="font-size:14px;" wx:if="{{radioValue != 2}}" minDate="{{yuyuemindate}}" mode="datetime" value="{{ value1 }}" lang="{{ lang }}" data-index="1" data-mode="datetime" bind:confirm="onConfirm">
+          <wux-cell title="预约时间（选填）" is-link extra="{{ displayValue1 }}"></wux-cell>
+      </wux-date-picker>
+
+      <radio-group style="border-bottom:1rpx solid #f0f0f0;border-top:1rpx solid #f0f0f0;padding:20rpx 0rpx;" bindchange="radioChange">
+        <label style="padding:0rpx 20rpx 0rpx 40rpx;">维修方式</label>
+        <label class="weui-cell weui-check__label" wx:for="{{items}}" wx:key="value">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="true"/>{{item.name}}
+          </view>
+        </label>
+      </radio-group>
+
+      <vtu-input title="地址" must border wx:if="{{radioValue == 1}}" text-align="left" value="" type="input" placeholder="请填写位置"  value="{{useraddress}}" style="text-align:right;">
+        <button type="primary" 
+          catch:tap="getAddrss" 
+          style="width:160rpx;height:70rpx;text-align: center;padding:0rpx;margin-top:10rpx;font-size:30rpx;line-height:70rpx;background-color: #47A1FB;font-weight: initial;">获取位置</button>
+      </vtu-input>
+
+      <view wx:if="{{radioValue == 2}}" >
+        <text selectable style="font-size:30rpx;margin:20rpx 20rpx 20rpx 0rpx;">请邮寄到：{{address}}</text>
+      </view>
+
+    </vtu-input-group>
+
+    <vtu-btn type="primary" formType="submit">提交</vtu-btn>
+    
+  </form>
+</view>

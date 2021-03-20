@@ -1,0 +1,162 @@
+/* pages/purchase/purchase.wxss */
+/* @import "../../components/vtu/template/shop/template.wxss"; */
+
+.pupContentBG {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+ 
+.pupContent {
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  /* box-shadow: 0 0 10rpx #333; */
+  height: 0;
+  z-index: 9;
+}
+ 
+/* 设置显示的背景 */
+ 
+.showBG {
+  display: block;
+}
+ 
+.hideBG {
+  display: none;
+}
+ 
+/* 弹出或关闭动画来动态设置内容高度 */
+ 
+@keyframes slideBGtUp {
+  from {
+    background: transparent;
+  }
+ 
+  to {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}
+ 
+@keyframes slideBGDown {
+  from {
+    background: rgba(0, 0, 0, 0.3);
+  }
+ 
+  to {
+    background: transparent;
+  }
+}
+ 
+/* 显示或关闭内容时动画 */
+ 
+.openBG {
+  animation: slideBGtUp 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+ 
+.closeBG {
+  animation: slideBGDown 0.5s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+ 
+/* 设置显示内容 */
+ 
+.showContent {
+  display: block;
+}
+ 
+.hideContent {
+  display: none;
+}
+ 
+/* 弹出或关闭动画来动态设置内容高度 */
+ 
+@keyframes slideContentUp {
+  from {
+    height: 0;
+  }
+ 
+  to {
+    height: 700rpx;
+  }
+}
+ 
+@keyframes slideContentDown {
+  from {
+    height: 700rpx;
+  }
+ 
+  to {
+    height: 0;
+  }
+}
+ 
+/* 显示或关闭内容时动画 */
+ 
+.open {
+  animation: slideContentUp 0.2s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+ 
+.close {
+  animation: slideContentDown 0.2s ease-in both;
+  /* animation-fill-mode: both 动画将会执行 forwards 和 backwards 执行的动作。 */
+}
+
+.pupContent-top{
+  text-align: center;
+  margin: 12px;
+}
+
+.goods-info{
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+image {
+  width: 110px;
+}
+
+.vtu-shopList-image{
+  margin-right: 10px;
+}
+
+.vtu-shopList-price-d {
+  display: inline-block;
+  font-size: 14px;
+  color: red;
+  font-weight: bold;
+}
+
+.vtu-shopList-price-s {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--font-hd);
+  text-decoration: line-through;
+  margin-left: 10px;
+}
+
+.vtu-shopList-label span {
+  border-radius: 5px;
+  padding: 0px 4px;
+  margin: 0px 5px 0 0;
+}
+.bg-red {
+  background: var(--red) !important;
+  color: #fff !important;
+  font-size: 12px;
+}
+.bj{
+  padding: 10px;
+}
+.prop-content{
+  margin-bottom: 15px;
+}
+page{
+  background: #f5f5f5;
+}

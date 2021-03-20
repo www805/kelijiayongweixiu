@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<import src="../../components/vtu/template/other/template.wxml"></import>
+<import src="../../components/vtu/template/shop/template.wxml"></import>
+<view>
+  <!-- <image src="/assets/index.png" mode="widthFix" style="width:100%"/> -->
+  <vtu-swiper list="{{imageList}}" height="{{(windowWidth+40)/2}}px" dot-type="round" indicator-active-color="#3fe816" swiper-class="swiperClass" indicator-dots="{{true}}" current="{{current}}" autoplay="{{true}}" bind:change="bindChange"></vtu-swiper>
+  <view style="margin-bottom:20rpx;">
+    <!-- <button class="btn1" type="primary" style="background-color: #FF8C00;" bind:tap="wxClick" data-url="/pages/order/order">马上维修</button> -->
+    <view class="baoxiu_item" style="margin-bottom:0rpx;" bind:tap="wxClick" data-url="/pages/order/order">
+        <text class="iconfont icon-churudengji" style="font-size:54rpx;"></text>
+        马上维修
+      </view>
+  </view>
+
+  <wux-loading id="wux-loading" />
+  <!-- <view style="margin-left:10rpx;margin-right:10rpx;">
+    <view style="width:50%;float:left;">
+      <view class="layoutSpan chaxun" style="margin-bottom:20rpx;" bind:tap="wxClick"  data-url="/pages/weixiulist/weixiulist">
+        <text class="iconfont icon-wendangchaxun" style="font-size:44rpx;"></text>
+        报修查询
+      </view>
+      <view class="layoutSpan huishou" bind:tap="wxClick" data-url="/pages/my/my">
+        <text class="iconfont icon-ziyuan189" style="font-size:44rpx;"></text>
+        回收查询
+      </view>
+    </view>
+
+    <view style="width:50%;float:left;">
+      <view class="layoutSpan baoxiu" style="margin-bottom:0rpx;" bind:tap="wxClick" data-url="/pages/order/order">
+        <text class="iconfont icon-churudengji" style="font-size:54rpx;"></text>
+        马上报修
+      </view>
+    </view>
+  
+  </view> -->
+
+  <template is="title_style3" data="{{title: '二手电器特卖', right:''}}" />
+
+  <!-----商品列表------>
+  <view style="padding:8px;background-color:#f5f5f5;overflow: auto;">
+    <template is="shopList_style3" data="{{href:'/pages/goods/goods', title:'9成新美的空调，超省电', priced:499.00, prices:599.9, src:'https://img3.mklimg.com/g1/M00/44/B3/rBBrBluONymAGYMPAAAgeh4Y1kU110.jpg'}}"/>
+    <template is="shopList_style3" data="{{href:'/pages/goods/goods', title:'9成新全自动洗衣机', priced:399.00, prices:899.9, src:'https://pic6.58cdn.com.cn/p1/big/n_v1bl2lwki5546vs6jbkz6a.jpg?w=425&h=320'}}"/>
+
+  </view>
+
+</view>

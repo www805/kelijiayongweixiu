@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-loading": "../../components/wux/loading/index",
+    "wux-gallery": "../../components/wux/gallery/index"
+  }
+}

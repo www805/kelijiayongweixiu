@@ -1,0 +1,33 @@
+/**my.wxss**/
+@import "../../assets/icons/ali.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* height: 200rpx; */
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.container{
+  background-color: #47A1FB;
+}
+.login_button{
+  font-size: 10rpx;
+  font-weight: 500;
+  margin-top: 50rpx;
+  
+}

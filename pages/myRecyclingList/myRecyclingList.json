@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的电器回收",
+  "usingComponents": {
+    "vtu-empty": "/components/vtu/empty/vtu-empty",
+    "vtu-btn": "/components/vtu/button/vtu-btn",
+    "vtu-tab": "/components/vtu/tab/vtu-tab",
+    "vtu-tabs": "/components/vtu/tabs/vtu-tabs"
+  }
+}

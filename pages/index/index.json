@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "wux-loading": "../../components/wux/loading/index",
+    "vtu-swiper": "../../components/vtu/swiper/vtu-swiper"
+  }
+}

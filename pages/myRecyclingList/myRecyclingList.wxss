@@ -1,0 +1,5 @@
+/* pages/myRecyclingList/myRecyclingList.wxss */
+
+.Vtu_Empty_Center_Src{
+  margin: 200px auto 20px auto;
+}

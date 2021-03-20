@@ -1,0 +1,62 @@
+
+<view class="cell_item">
+  维修单号：<text selectable>{{orderid}}</text>
+</view>
+<view class="cell_item">
+  状态：<text class="tag_item {{weixiuColorArr[isweixiu-1]}}">{{weixiuStrArr[isweixiu-1]}}</text>
+</view>
+<view class="cell_item">
+  维修方式：<text class="tag_item tag_LimeGreen">{{ strArr[isState-1] }}</text>
+</view>
+<view class="cell_item" wx:if="{{isweixiu > 1}}">
+  维修价钱：<text style="color:red;">{{ money }}</text>
+</view>
+<view class="cell_item" wx:if="{{isweixiu > 1}}">
+  预约时间：<text style="color:#999;">2021-01-17 15:35:11</text>
+</view>
+<block wx:if="{{isState == 1}}">
+  <view class="cell_item">
+    上门时间：2020-10-06 11:22:33
+  </view>
+  <view class="cell_item">
+    上门地址：油城六路10号
+  </view>
+</block>
+<view wx:if="{{isState == 2}}" class="cell_item">
+  邮寄地址：<text selectable="true">{{othadAddress}}</text>
+</view>
+<view class="cell_item">
+  维修描述：<text selectable>{{describe}}</text>
+</view>
+<view class="cell_item">
+  <view style="margin-bottom:10rpx;">故障图片：</view>
+  <view style="overflow:hidden;">
+
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__bd">
+                <view class="weui-uploader">
+                    <view class="weui-uploader__bd">
+                        <view class="weui-uploader__files">
+                            <block wx:for-items="{{ urls }}" wx:key="index">
+                                <view class="weui-uploader__file" style="float:left;" bindtap="previewImage" data-current="{{ item }}">
+                                    <image class="weui-uploader__img image_item" src="{{ item }}" />
+                                </view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+  </view>
+</view>
+<vtu-dialog id="Vtu-Dialog"></vtu-dialog>
+<view id="btnid">
+<!-- "等待维修","修理中","待确认","完成维修" -->
+  <vtu-btn shadow inlineBlock="false" type="danger" bind:click="delAlert" wx:if="{{isweixiu == 1}}" >删除</vtu-btn>
+  <vtu-btn shadow inlineBlock="false" type="primary" wx:if="{{isweixiu < 3}}" bind:tap="gotoEdit">编辑</vtu-btn>
+  <vtu-btn shadow inlineBlock="false" type="warning" wx:if="{{isweixiu == 1 || isweixiu == 2}}" >确认维修</vtu-btn>
+  <!-- <vtu-btn shadow inlineBlock="false" type="success" wx:if="{{isweixiu == 2}}" bind:tap="successAlert" >确认完成</vtu-btn> -->
+</view>
+  <vtu-btn shadow inlineBlock="true" type="success" id="btnBlock" wx:if="{{isweixiu == 3 || isweixiu == 4}}" bind:tap="successAlert">确认完成</vtu-btn>

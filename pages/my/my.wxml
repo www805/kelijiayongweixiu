@@ -1,0 +1,34 @@
+<!--my.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" size="mini" class="login_button" style="width: 300rpx;border-radius: 38rpx;"> 登录 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+
+</view>
+
+<wux-loading id="wux-loading" />
+
+<navigator url="/pages/weixiulist/weixiulist">
+  <vtu-cell title="我的维修单" border arrow icon="iconfont icon-weixiubaoxiu" icon-color="#000"></vtu-cell>
+</navigator>
+<navigator url="/pages/myRecyclingList/myRecyclingList">
+  <vtu-cell title="我的回收" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell>
+</navigator>
+<vtu-cell title="我的购买" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
+
+<!-- 维修师傅下 -->
+<vtu-cell title="维修列表" border arrow icon="iconfont icon-wendangxiugai" icon-color="#000"></vtu-cell>
+<!-- 管理员下 -->
+<vtu-cell title="二手列表" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
+<vtu-cell title="回收列表" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell>
+
+<navigator url="/pages/about/about">
+  <vtu-cell title="关于我们" border arrow icon="iconfont icon-shangdian" icon-color="#000"></vtu-cell>
+</navigator>

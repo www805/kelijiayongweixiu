@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "维修单详情",
+  "usingComponents": {
+    "vtu-cell": "/components/vtu/cell/item/vtu-cell",
+    "wux-gallery": "/components/wux/gallery/index",
+    "vtu-tag": "/components/vtu/tag/vtu-tag",
+    "vtu-btn": "/components/vtu/button/vtu-btn",
+    "vtu-dialog": "/components/vtu/dialog/vtu-dialog"
+  }
+}

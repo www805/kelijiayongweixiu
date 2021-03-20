@@ -1,0 +1,43 @@
+<wux-refresher id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh" bind:loadmore="onLoadmore" scrollTop="{{scrollTop}}">
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd">
+
+          <view class="weui-media-box weui-media-box_text" wx:for="{{ items }}" wx:key="index">
+            <vtu-panel use-footer-slot="true" bind:tap="gotoDetails">
+              <view slot="header" class="header_item">
+                <view class="item_left">处理状态：</view>
+                <view class="header_item_right">修理中</view>
+              </view>
+              <view class="cen_body" >
+                <view class="cen_item">
+                  <view class="item_left">订单号：</view>
+                  <view class="text_right">1233312312321213</view>
+                </view>
+                <view class="cen_item">
+                  <view class="item_left">维修方式：</view>
+                  <view class="text_right">上门</view>
+                </view>
+                <view class="cen_item">
+                  <view class="item_left">报修描述：</view>
+                  <view class="text_right">电饭煲坏了，插头不通电。</view>
+                </view>
+                <view class="cen_item">
+                  <view class="item_left">故障图片：</view>
+                  <view class="text_right">
+                    <image class="img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1134520428,2352648146&fm=26&gp=0.jpg"></image>
+                    <image class="img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1134520428,2352648146&fm=26&gp=0.jpg"></image>
+                    <image class="img" src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=1134520428,2352648146&fm=26&gp=0.jpg"></image>
+                  </view>
+                </view>
+              </view>
+              <view slot="footer" class="footBtn">
+                <view class="item_left">报修时间：</view>
+                <view class="text_right">2020-10-24 12:03:58</view>
+              </view>
+            </vtu-panel>
+          </view>
+
+          
+        </view>
+    </view>
+</wux-refresher>

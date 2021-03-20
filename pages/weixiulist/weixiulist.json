@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "我的维修单",
+  "usingComponents": {
+      "wux-refresher": "../../components/wux/refresher/index",
+      "vtu-panel": "../../components/vtu/panel/vtu-panel",
+      "vtu-cell": "../../components/vtu/cell/item/vtu-cell",
+      "vtu-btn": "../../components/vtu/button/vtu-btn",
+      "vtu-avatar": "../../components/vtu/avatar/vtu-avatar"
+  }
+}

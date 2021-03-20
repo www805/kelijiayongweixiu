@@ -1,0 +1,15 @@
+<!--pages/myRecyclingList/myRecyclingList.wxml-->
+<vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
+<!-- badge="hot" -->
+  <vtu-tab label="估价商品" name="name1" custom-class="style-content" >
+    <vtu-empty src="/assets/image/empty.png" imageTop="380px" fill label="没有更多数据了~" describe="当前搜索的数据为空，请重新搜索" ></vtu-empty>
+  </vtu-tab>
+  <vtu-tab label="交易完成" name="name2" custom-class="style-content" >
+    <vtu-empty src="/assets/image/empty2.png" imageTop="380px" imageWidth="100px" fill label="您还没有登录~">
+  <vtu-btn type="primary" inlineBlock open-type="getUserInfo">立即登录</vtu-btn>
+</vtu-empty>
+  </vtu-tab>
+  <vtu-tab label="全部" name="name3" custom-class="style-content">
+    <vtu-empty icon="iconfont icon-kong" fill-screen icon-color="orange" icon-size="50px" label="空空如也~"></vtu-empty>
+  </vtu-tab>
+</vtu-tabs>

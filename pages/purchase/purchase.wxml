@@ -1,0 +1,38 @@
+<!--pages/purchase/purchase.wxml-->
+<!-- <text>pages/purchase/purchase.wxml</text> -->
+
+<view class="bj">
+  <view class="goods-info">
+    <view class="vtu-shopList-image">
+      <image src="https://img3.mklimg.com/g1/M00/44/B3/rBBrBluONymAGYMPAAAgeh4Y1kU110.jpg" mode="widthFix"/>
+    </view>
+    <view class="vtu-shopList-center">
+      <view class="vtu-shopList-label">
+        <span class="bg-red">自营</span>
+        <span  >二手冰箱特价，省电，够冻，静音，多功能</span>
+      </view>
+    </view>
+    <view class="vtu-shopList-price">
+      <view class="vtu-shopList-price-d">￥<font>299.80</font></view>
+      <view class="vtu-shopList-price-s">￥599</view>
+    </view>
+  </view>
+  <view class="prop-content">
+    <vtu-input-group>
+      <vtu-input title="配送方式" border value="{{pickerIndex}}" range="{{pickerArray1}}" range-key="label" type="picker" bindchange="pickerChange" arrow></vtu-input>
+      <vtu-input title="联系人" border must placeholder="请输入联系人姓名" type="input" text-align="left"></vtu-input>
+      <vtu-input title="联系电话" border must placeholder="请输入联系人手机号码" type="input" text-align="left" input-type="number"></vtu-input>
+      <view hidden="{{goumaishow}}">
+        <vtu-input title="收货地址" border must placeholder="请输入收货地址" type="input" text-align="left"></vtu-input>
+      </view>
+      <vtu-input title="备注" border placeholder="请输入内容" value="" type="textarea" text-align="left" text-height="100px" show-max-label="{{true}}" maxlength="300"></vtu-input>
+    </vtu-input-group>
+  </view>
+
+  <vtu-btn type="primary" catchtap='clickPup'>确定支付</vtu-btn>
+</view>
+
+
+
+  
+  

@@ -1,0 +1,63 @@
+/* pages/goods/goods.wxss */
+@import "../../components/vtu/template/shop/template.wxss";
+
+.weui-uploader__img{
+  height: 100%;
+}
+swiper {
+  height: 240px;
+}
+image{
+  width: 100%;
+}
+.title{
+  font-weight: bold;
+  font-size: 20px;
+}
+.vtu-shopList-price{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.swiper_page{
+  background:#000;
+  color:#fff;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0px 5px;
+}
+.page-section{
+  position: relative;
+}
+.goods_body{
+  background-color: #eee;
+}
+.base_info{
+  background-color: #fff;
+  padding: 10px;
+}
+.shop_info{
+  background-color: #fff;
+  margin-top: 10px;
+  padding: 10px;
+}
+.shop_label{
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.shop_text{
+  color: #999;
+}
+.buy_bottom{
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  width:100%;
+}
+page{
+  background-color: #eee;
+}
+.bg-olive{
+  position: relative;
+  top:0;
+}
