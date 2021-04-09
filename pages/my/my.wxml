@@ -24,10 +24,10 @@
 <vtu-cell title="我的购买" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
 
 <!-- 维修师傅下 -->
-<vtu-cell title="维修列表" border arrow icon="iconfont icon-wendangxiugai" icon-color="#000"></vtu-cell>
+<!-- <vtu-cell title="维修列表" border arrow icon="iconfont icon-wendangxiugai" icon-color="#000"></vtu-cell> -->
 <!-- 管理员下 -->
-<vtu-cell title="二手列表" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
-<vtu-cell title="回收列表" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell>
+<!-- <vtu-cell title="二手列表" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
+<vtu-cell title="回收列表" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell> -->
 
 <navigator url="/pages/about/about">
   <vtu-cell title="关于我们" border arrow icon="iconfont icon-shangdian" icon-color="#000"></vtu-cell>

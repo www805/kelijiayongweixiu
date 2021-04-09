@@ -5,9 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-    value2: 'name1'
+    value2: 'name1',
+    currentTabIndex:0
   },
-
+  onTabsItemTap:function(event){
+    let index=event.currentTarget.dataset.index;
+    this.setData({
+      currentTabIndex:index
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,6 +1,23 @@
 <!--pages/myRecyclingList/myRecyclingList.wxml-->
-<vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
+
+<view id='tabs'>
+  <view class='tabs-box'>
+    <block wx:for="{{['估价商品','交易完成','全部']}}" wx:key="index">
+      <view class="tabs-item {{currentTabIndex == index ? 'selected' : '' }}" bindtap='onTabsItemTap' data-index='{{index}}'>
+        {{item}}      
+      </view>
+    </block>
+  </view>
+  <view class='ordert-detail'>
+    <view hidden='{{currentTabIndex != 0}}'>页面1<image src="/assets/image/empty.png" /></view>
+    <view hidden='{{currentTabIndex != 1}}'>页面2</view>
+    <view hidden='{{currentTabIndex != 2}}'>页面3</view>
+    <!-- <view hidden='{{currentTabIndex != 3}}'>页面4</view> -->
+  </view>
+</view>
 <!-- badge="hot" -->
+<!-- <vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
+
   <vtu-tab label="估价商品" name="name1" custom-class="style-content" >
     <vtu-empty src="/assets/image/empty.png" imageTop="380px" fill label="没有更多数据了~" describe="当前搜索的数据为空，请重新搜索" ></vtu-empty>
   </vtu-tab>
@@ -12,4 +29,4 @@
   <vtu-tab label="全部" name="name3" custom-class="style-content">
     <vtu-empty icon="iconfont icon-kong" fill-screen icon-color="orange" icon-size="50px" label="空空如也~"></vtu-empty>
   </vtu-tab>
-</vtu-tabs>
+</vtu-tabs> -->

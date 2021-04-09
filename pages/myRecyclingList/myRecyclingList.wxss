@@ -3,3 +3,25 @@
 .Vtu_Empty_Center_Src{
   margin: 200px auto 20px auto;
 }
+
+#tabs{
+  font-size: 14px;
+}
+.tabs-box{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center
+}
+.tabs-item.selected {
+    color:rgb(25, 137, 250);
+    border-bottom:5rpx solid rgb(25, 137, 250);
+}
+.tabs-item {
+    width: 33.3%;
+    color:var(--font-hb);
+    border-bottom:5rpx solid #e9e9e9;
+}
+

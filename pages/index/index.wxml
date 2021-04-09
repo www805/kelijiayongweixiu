@@ -44,3 +44,10 @@
   </view>
 
 </view>
+
+<!-- {
+        "pagePath": "pages/recycle/recycle",
+        "text": "回收",
+        "iconPath": "/assets/hs.png",
+        "selectedIconPath": "/assets/hs_active.png"
+      }, -->
