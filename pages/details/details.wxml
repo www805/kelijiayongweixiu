@@ -2,17 +2,18 @@
 <view class="cell_item">
   维修单号：<text selectable>{{orderid}}</text>
 </view>
-<view class="cell_item">
+<!-- <view class="cell_item">
   状态：<text class="tag_item {{weixiuColorArr[isweixiu-1]}}">{{weixiuStrArr[isweixiu-1]}}</text>
-</view>
+</view> -->
 <view class="cell_item">
   维修方式：<text class="tag_item tag_LimeGreen">{{ strArr[isState-1] }}</text>
 </view>
 <view class="cell_item" wx:if="{{isweixiu > 1}}">
-  维修价钱：<text style="color:red;">{{ money }}</text>
+  <text style="text-align: right;">维修价钱：</text>
+  <text style="color:red;text-align: right;">{{ money }}</text>
 </view>
 <view class="cell_item" wx:if="{{isweixiu > 1}}">
-  预约时间：<text style="color:#999;">2021-01-17 15:35:11</text>
+  报修时间：<text style="color:#999;">2021-01-17 15:35:11</text>
 </view>
 <block wx:if="{{isState == 1}}">
   <view class="cell_item">
@@ -26,12 +27,12 @@
   邮寄地址：<text selectable="true">{{othadAddress}}</text>
 </view>
 <view class="cell_item">
-  维修描述：<text selectable>{{describe}}</text>
+  <view style="margin-bottom:5px;">维修描述：</view>
+  <text selectable >{{describe}}</text>
 </view>
 <view class="cell_item">
   <view style="margin-bottom:10rpx;">故障图片：</view>
   <view style="overflow:hidden;">
-
     <view class="weui-cells weui-cells_after-title">
         <view class="weui-cell">
             <view class="weui-cell__bd">
@@ -52,11 +53,36 @@
   </view>
 </view>
 <vtu-dialog id="Vtu-Dialog"></vtu-dialog>
+
+<view class="heng"></view>
+
+<view class="wenti">
+  <view class="zt_jc">问题跟踪</view>
+  <view>
+    <vtu-steps value="{{value1}}" direction="vertical" shape="spot" >
+      <vtu-step title="修理完成" des="2012-12-22 12:33:23 已修理完成，客户确认"></vtu-step>
+      <vtu-step title="开始修理" des="2012-12-22 17:43:22 加急修理中"></vtu-step>
+      <vtu-step title="维修报价" des="查看装货进度" name="name3" icon="iconfont icon-daohang"></vtu-step>
+      <vtu-step title="待评价" name="name4"></vtu-step>
+      <vtu-step title="发起订单" name="naizi"></vtu-step>
+      <vtu-progress slot="name3" value="95" circle color="red" stroke-width="5px"></vtu-progress>
+      <vtu-rate slot="name4" value="1" count="5" size="16px" disabled="{{value1 != 3}}" bind:change="bindChange" active-color="red"></vtu-rate>
+      <view slot="naizi">
+        <view style="color:#000;" size="16px">
+          快速回复：<text >1111111111</text>
+        </view>
+        <view>2012-12-22 12:33:23</view>
+      </view>
+    </vtu-steps>
+  </view>
+</view>
+
+<!-- 
 <view id="btnid">
-<!-- "等待维修","修理中","待确认","完成维修" -->
+ "等待维修","修理中","待确认","完成维修" 
   <vtu-btn shadow inlineBlock="false" type="danger" bind:click="delAlert" wx:if="{{isweixiu == 1}}" >删除</vtu-btn>
   <vtu-btn shadow inlineBlock="false" type="primary" wx:if="{{isweixiu < 3}}" bind:tap="gotoEdit">编辑</vtu-btn>
   <vtu-btn shadow inlineBlock="false" type="warning" wx:if="{{isweixiu == 1 || isweixiu == 2}}" >确认维修</vtu-btn>
-  <!-- <vtu-btn shadow inlineBlock="false" type="success" wx:if="{{isweixiu == 2}}" bind:tap="successAlert" >确认完成</vtu-btn> -->
+   <vtu-btn shadow inlineBlock="false" type="success" wx:if="{{isweixiu == 2}}" bind:tap="successAlert" >确认完成</vtu-btn> 
 </view>
-  <vtu-btn shadow inlineBlock="true" type="success" id="btnBlock" wx:if="{{isweixiu == 3 || isweixiu == 4}}" bind:tap="successAlert">确认完成</vtu-btn>
+  <vtu-btn shadow inlineBlock="true" type="success" id="btnBlock" wx:if="{{isweixiu == 3 || isweixiu == 4}}" bind:tap="successAlert">确认完成</vtu-btn> -->

@@ -1,10 +1,14 @@
 {
-  "navigationBarTitleText": "维修单详情",
+  "navigationBarTitleText": "报修详情",
   "usingComponents": {
     "vtu-cell": "/components/vtu/cell/item/vtu-cell",
     "wux-gallery": "/components/wux/gallery/index",
     "vtu-tag": "/components/vtu/tag/vtu-tag",
     "vtu-btn": "/components/vtu/button/vtu-btn",
-    "vtu-dialog": "/components/vtu/dialog/vtu-dialog"
+    "vtu-dialog": "/components/vtu/dialog/vtu-dialog",
+    "vtu-steps": "/components/vtu/steps/steps/vtu-steps",
+    "vtu-step": "/components/vtu/steps/step/vtu-step",
+    "vtu-rate": "/components/vtu/rate/vtu-rate",
+    "vtu-progress": "/components/vtu/progress/vtu-progress"
   }
 }

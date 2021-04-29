@@ -1,15 +1,15 @@
 <!--pages/shopSearch/shopSearch.wxml
 <text>pages/shopSearch/shopSearch.wxml</text>-->
-<vtu-search search-shape="circle">
-     <vtu-btn slot="append" type="primary" inlineBlock round shadow width="70px" size="small">搜索</vtu-btn> 
-</vtu-search>
 
 
-
-<wux-refresher id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh" bind:loadmore="onLoadmore" scrollTop="{{scrollTop}}">
+<view>
+  <wux-refresher id="wux-refresher" bind:pulling="onPulling" bind:refresh="onRefresh" bind:loadmore="onLoadmore" scrollTop="{{scrollTop}}" >
+    <!-- 搜索框 -->
+    <vtu-search search-shape="circle">
+        <vtu-btn slot="append" type="primary" inlineBlock round shadow width="70px" size="small">搜索</vtu-btn> 
+    </vtu-search>
     <view class="weui-panel weui-panel_access" id="limian">
         <view class="weui-panel__bd">
-
           <view class="weui-media-box weui-media-box_text" wx:for="{{ items }}" wx:key="index">
             <vtu-panel use-footer-slot="true" bind:tap="gotoDetails">
               <view slot="header" class="header_item">
@@ -48,6 +48,6 @@
           
         </view>
     </view>
-</wux-refresher>
-
-
+  </wux-refresher>
+</view>
+  <view class='gotop' catchtap='goTop'>顶部</view>

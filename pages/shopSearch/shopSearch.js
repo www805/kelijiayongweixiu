@@ -20,6 +20,15 @@ Page({
     this.setData({
         scrollTop: e.scrollTop
     })
+    if (e.scrollTop > 100) {
+        this.setData({
+          floorstatus: true
+        });
+      } else {
+        this.setData({
+          floorstatus: false
+        });
+      }
   },
   onPulling() {
       console.log('onPulling')
@@ -56,6 +65,12 @@ Page({
       })
   },
   
+  goTop:function(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
