@@ -65,3 +65,62 @@
   background: #eee;
   height: 10px;
 }
+
+
+
+li {
+  position: relative;
+  /*padding: 0 30px;*/
+  list-style: none;
+  /*border-left: 2px solid #ccc;*/
+}
+
+.zuobiantime{
+position: absolute;
+top: 0;
+left: -60px;
+
+}
+.mei {
+  /*position: relative;*/
+  padding: 0 20px 10px 20px;
+  border-left: 2px solid #eee;
+}
+.mei:before{
+  content: " ";
+  display: block;
+  position: absolute;
+  margin-left: 9px;
+  margin-top: 4px;
+  top: 0;
+  left: -15px;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  text-align: center;
+  background: #ccc;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50%;
+}
+.da{
+font-weight: bold;
+}
+.xiao{
+color: #ccc;
+font-size: 12px;
+text-align: right;
+}
+.tishi{
+color: #999;
+font-size: 12px;
+background-color: #eee;
+padding: 3px 10px;
+border-radius: 12px;
+}
+.neirong{
+margin-top: 5px;
+font-size: 15px;
+padding-bottom: 10px;
+border-bottom: 1px solid #ccc;
+}

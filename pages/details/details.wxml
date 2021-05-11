@@ -59,7 +59,7 @@
 <view class="wenti">
   <view class="zt_jc">问题跟踪</view>
   <view>
-    <vtu-steps value="{{value1}}" direction="vertical" shape="spot" >
+    <!-- <vtu-steps value="{{value1}}" direction="vertical" shape="spot" >
       <vtu-step title="修理完成" des="2012-12-22 12:33:23 已修理完成，客户确认"></vtu-step>
       <vtu-step title="开始修理" des="2012-12-22 17:43:22 加急修理中"></vtu-step>
       <vtu-step title="维修报价" des="查看装货进度" name="name3" icon="iconfont icon-daohang"></vtu-step>
@@ -73,9 +73,86 @@
         </view>
         <view>2012-12-22 12:33:23</view>
       </view>
-    </vtu-steps>
+    </vtu-steps> -->
+    
   </view>
 </view>
+
+
+<ul>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">处理完成</span></div>
+              <div class="neirong">
+                师傅回复：修理好了
+              </div>
+            </div>
+        </li>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">已接单</span></div>
+              <div class="neirong">
+                客服回复：我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条
+              </div>
+            </div>
+        </li>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">已接单</span></div>
+              <div class="neirong">
+                系统回复：我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条
+              </div>
+            </div>
+        </li>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">已接单</span></div>
+              <div class="neirong">
+                师傅回复：我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条
+              </div>
+            </div>
+        </li>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">已接单</span></div>
+              <div class="neirong">
+                师傅回复：我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条
+              </div>
+            </div>
+        </li>
+        <li>
+            <div class="zuobiantime">
+              <p class="da">17:26</p>
+              <p class="xiao">05-11</p>
+            </div>
+            <div class="mei">
+              <div><span class="tishi">已接单</span></div>
+              <div class="neirong">
+                师傅回复：我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条我是竖向导航条
+              </div>
+            </div>
+        </li>
+    </ul>
 
 <!-- 
 <view id="btnid">
