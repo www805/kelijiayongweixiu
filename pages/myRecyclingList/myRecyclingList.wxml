@@ -10,7 +10,9 @@
   </view>
   <view class='ordert-detail'>
     <view hidden='{{currentTabIndex != 0}}'>页面1<image src="/assets/image/empty.png" /></view>
-    <view hidden='{{currentTabIndex != 1}}'>页面2</view>
+    <view hidden='{{currentTabIndex != 1}}'>页面2
+      
+    </view>
     <view hidden='{{currentTabIndex != 2}}'>页面3</view>
     <!-- <view hidden='{{currentTabIndex != 3}}'>页面4</view> -->
   </view>

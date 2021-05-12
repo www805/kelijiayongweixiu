@@ -3,7 +3,7 @@
   /* border-bottom: 1rpx solid #eee; */
   padding: 10rpx;
   margin: 10rpx;
-  font-size: 34rpx;
+  font-size: 14px;
 }
 
 .image_item{
@@ -66,34 +66,31 @@
   height: 10px;
 }
 
-
-
+ul{
+  padding-left: 80px;
+}
 li {
-  position: relative;
-  /*padding: 0 30px;*/
   list-style: none;
-  /*border-left: 2px solid #ccc;*/
+  display: flex;
+  
 }
 
 .zuobiantime{
-position: absolute;
-top: 0;
-left: -60px;
-
+  padding-left: 20px;
 }
 .mei {
-  /*position: relative;*/
+  width: 100%;
+  position: relative;
   padding: 0 20px 10px 20px;
   border-left: 2px solid #eee;
+  margin-left: 20px;
 }
 .mei:before{
-  content: " ";
+  content: "";
   display: block;
   position: absolute;
-  margin-left: 9px;
-  margin-top: 4px;
-  top: 0;
-  left: -15px;
+  top: 4px;
+  left: -8px;
   width: 15px;
   height: 15px;
   line-height: 15px;
@@ -105,6 +102,7 @@ left: -60px;
 }
 .da{
 font-weight: bold;
+font-size: 14px;
 }
 .xiao{
 color: #ccc;
@@ -119,8 +117,8 @@ padding: 3px 10px;
 border-radius: 12px;
 }
 .neirong{
-margin-top: 5px;
+margin-top: 10px;
 font-size: 15px;
 padding-bottom: 10px;
-border-bottom: 1px solid #ccc;
+border-bottom: 1px solid #eee;
 }

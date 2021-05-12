@@ -8,6 +8,7 @@
     <vtu-search search-shape="circle">
         <vtu-btn slot="append" type="primary" inlineBlock round shadow width="70px" size="small">搜索</vtu-btn> 
     </vtu-search>
+    
     <view class="weui-panel weui-panel_access" id="limian">
         <view class="weui-panel__bd">
           <view class="weui-media-box weui-media-box_text" wx:for="{{ items }}" wx:key="index">
