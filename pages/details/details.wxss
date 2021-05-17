@@ -34,6 +34,7 @@
 
 .tag_LimeGreen{
   background-color: LimeGreen;
+  color: #fff;
 }
 
 .tag_green{
@@ -110,9 +111,9 @@ font-size: 12px;
 text-align: right;
 }
 .tishi{
-color: #999;
+/* color: #999; */
 font-size: 12px;
-background-color: #eee;
+/* background-color: #eee; */
 padding: 3px 10px;
 border-radius: 12px;
 }

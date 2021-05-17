@@ -61,8 +61,4 @@
 .vtu-title3-label{
   padding-left: 15px;
 }
-.vtu-shopList.infeed .vtu-shopList-image{
-  padding-left: 10px;
-  padding-top: 10px;
-  width: 110px;
-}
+

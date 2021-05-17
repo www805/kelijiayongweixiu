@@ -1,0 +1,95 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "pages/order/order",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/weixiulist/weixiulist",
+          "pathName": "pages/weixiulist/weixiulist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "pages/recycle/recycle",
+          "pathName": "pages/recycle/recycle",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/about/about",
+          "pathName": "pages/about/about",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "pages/details/details",
+          "pathName": "pages/details/details",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myRecyclingList/myRecyclingList",
+          "pathName": "pages/myRecyclingList/myRecyclingList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/goods/goods",
+          "pathName": "pages/goods/goods",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/purchase/purchase",
+          "pathName": "pages/purchase/purchase",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/shopSearch/shopSearch",
+          "pathName": "pages/shopSearch/shopSearch",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/myBuyList/myBuyList",
+          "pathName": "pages/myBuyList/myBuyList",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

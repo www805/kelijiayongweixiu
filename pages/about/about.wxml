@@ -1,7 +1,7 @@
 <!--pages/about/about.wxml-->
 <vtu-panel use-footer-slot="true" round>
   <vtu-cell slot="header" icon="iconfont icon-shangdian" icon-color="#000" title="门店信息" border round></vtu-cell>
-  <view style="color:#999;font-size:34rpx;">
+  <view style="color:#999;font-size:14px;">
     <view>门店名：科力家电维修中心</view>
     <view>门店地址：茂名市朝阳街38号</view>
     <view>联系人：吴先生</view>

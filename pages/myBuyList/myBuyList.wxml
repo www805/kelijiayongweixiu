@@ -9,26 +9,28 @@
     </block>
   </view>
   <view class='ordert-detail'>
-    <view hidden='{{currentTabIndex != 0}}'>页面1<image src="/assets/image/empty.png" /></view>
-    <view hidden='{{currentTabIndex != 1}}'>页面2
+    <view hidden='{{currentTabIndex != 0}}'>页面1
       
+    </view>
+    <view hidden='{{currentTabIndex != 1}}'>页面2
+      <image src="/assets/image/empty.png" />
     </view>
     <view hidden='{{currentTabIndex != 2}}'>页面3</view>
     <!-- <view hidden='{{currentTabIndex != 3}}'>页面4</view> -->
   </view>
 </view>
 <!-- badge="hot" -->
-<!-- <vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
+<vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
 
-  <vtu-tab label="估价商品" name="name1" custom-class="style-content" >
+  <vtu-tab label="全部" name="name1" custom-class="style-content" >
     <vtu-empty src="/assets/image/empty.png" imageTop="380px" fill label="没有更多数据了~" describe="当前搜索的数据为空，请重新搜索" ></vtu-empty>
   </vtu-tab>
-  <vtu-tab label="交易完成" name="name2" custom-class="style-content" >
+  <vtu-tab label="处理中" name="name2" custom-class="style-content" >
     <vtu-empty src="/assets/image/empty2.png" imageTop="380px" imageWidth="100px" fill label="您还没有登录~">
-  <vtu-btn type="primary" inlineBlock open-type="getUserInfo">立即登录</vtu-btn>
-</vtu-empty>
+      <vtu-btn type="primary" inlineBlock open-type="getUserInfo">立即登录</vtu-btn>
+    </vtu-empty>
   </vtu-tab>
-  <vtu-tab label="全部" name="name3" custom-class="style-content">
+  <vtu-tab label="交易完成" name="name3" custom-class="style-content">
     <vtu-empty icon="iconfont icon-kong" fill-screen icon-color="orange" icon-size="50px" label="空空如也~"></vtu-empty>
   </vtu-tab>
-</vtu-tabs> -->
+</vtu-tabs>

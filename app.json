@@ -11,7 +11,8 @@
     "pages/shopSearch/shopSearch",
     "pages/goods/goods",
     "pages/purchase/purchase",
-    "pages/myRecyclingList/myRecyclingList"
+    "pages/myRecyclingList/myRecyclingList",
+    "pages/myBuyList/myBuyList"
   ],
   "window": {
     "backgroundTextStyle": "light",

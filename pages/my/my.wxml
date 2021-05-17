@@ -18,10 +18,12 @@
 <navigator url="/pages/weixiulist/weixiulist">
   <vtu-cell title="我的维修单" border arrow icon="iconfont icon-weixiubaoxiu" icon-color="#000"></vtu-cell>
 </navigator>
-<navigator url="/pages/myRecyclingList/myRecyclingList">
+<!-- <navigator url="/pages/myRecyclingList/myRecyclingList">
   <vtu-cell title="我的回收" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell>
+</navigator> -->
+<navigator url="/pages/myBuyList/myBuyList">
+  <vtu-cell title="我的购买" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
 </navigator>
-<vtu-cell title="我的购买" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
 
 <!-- 维修师傅下 -->
 <!-- <vtu-cell title="维修列表" border arrow icon="iconfont icon-wendangxiugai" icon-color="#000"></vtu-cell> -->

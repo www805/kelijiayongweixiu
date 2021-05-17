@@ -98,7 +98,7 @@
 <template name="shopList_style3">
   <view class="vtu-shopList infeed">
     <navigator url="{{href}}">
-      <view class="vtu-shopList-image"><image src="{{src}}" style="height:110px" /></view>
+      <view class="vtu-shopList-image"><image src="{{src}}" style="height:100px" /></view>
       <view class="vtu-shopList-center">
         <view class="vtu-shopList-label"><span class="bg-olive">自营</span>{{title==null?'超火毛衣女心机上衣设计感秋冬百搭内搭可外穿修身打底针织衫女秋':title}}</view>
         <view class="vtu-shopList-tag"><span class="bg-red-out">满99减5</span><span class="bg-cyan">限时购</span></view>
