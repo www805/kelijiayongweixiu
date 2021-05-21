@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "我的购买",
+  "navigationBarTitleText": "我的订单",
   "usingComponents": {
     "vtu-empty": "/components/vtu/empty/vtu-empty",
     "vtu-btn": "/components/vtu/button/vtu-btn",

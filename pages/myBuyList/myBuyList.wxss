@@ -25,3 +25,52 @@
     border-bottom:5rpx solid #e9e9e9;
 }
 
+
+.goods-info{
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+.goods-info image {
+  width: 110px;
+}
+
+.vtu-shopList-image{
+  margin-right: 10px;
+}
+
+.vtu-shopList-label{
+  padding-bottom: 5px;
+}
+
+.vtu-shopList-label span {
+  border-radius: 5px;
+  padding: 0px 4px;
+  margin: 0px 5px 0 0;
+}
+
+.bg-red {
+  background: var(--red) !important;
+  color: #fff !important;
+  font-size: 12px;
+}
+
+.btn-red{
+  color: #fff;
+  background: orange;
+  padding: 5px 10px;
+  float: right;
+}
+
+.font-ziti{
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 3px;
+}
+
+.price{
+  font-size: 14px;
+  font-weight: bold;
+}
