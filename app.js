@@ -33,9 +33,63 @@ App({
       }
     })
   },
+
+  loadData: function (that, url, data) {
+    that.setData({
+      loadText: '', //正在加载
+      loadClass: 'loadTip icon i-loading' + (that.data.array.length == 0 ? ' big' : '') //显示一个loading动画
+    });
+    data.page = that.data.page; //当前页码
+    data.pageSize = that.data.pageSize; //每页记录数
+    data.UserID = wx.getStorageSync('User').ID; //当前用户ID，如果不需要，可删除
+    wx.request({
+      url: url,
+      data: data,
+      success: function (res) {
+        //不同于jQuery的AJAX，这里success回调还需要判断状态码，200才表示成功
+        if (res.statusCode == 200) {
+          that.setData({
+            array: that.data.array.concat(res.data.list),
+            total: res.data.Total
+          });
+          if (res.data.Total == 0) {
+            that.setData({
+              loadText: '没有相关信息',
+              loadClass: 'loadTip big icon i-info'
+            });
+          } else if (that.data.page == Math.ceil(res.data.Total / that.data.pageSize)) {
+            that.setData({
+              loadText: '全部加载完成',
+              loadClass: 'loadTip'
+            });
+          } else {
+            that.setData({
+              page: that.data.page + 1,
+              loadText: '上滑加载更多',
+              loadClass: 'loadTip'
+            });
+          }
+        } else {
+          that.setData({
+            loadText: '加载失败，点此重试',
+            loadClass: 'loadTip' + (that.data.array.length == 0 ? ' big icon i-sad' : '')
+          });
+        }
+
+       
+      },
+      fail: function () {
+        that.setData({
+          loadText: '加载失败，点此重试',
+          loadClass: 'loadTip' + (that.data.array.length == 0 ? ' big icon i-sad' : '')
+        });
+      }
+    });
+  },
+
   globalData: {
     userInfo: null,
-    dpAddress:'广东省茂名市金阳街38号科力家电维修中心，吴建波，133333333',
-    othadAddress:'广东省茂名市金阳街38号科力家电维修中心'
+    dpAddress: '广东省茂名市金阳街38号科力家电维修中心，吴建波，133333333',
+    othadAddress: '广东省茂名市金阳街38号科力家电维修中心'
   }
 })

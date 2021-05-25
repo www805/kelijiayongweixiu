@@ -1,6 +1,6 @@
 <!--pages/myRecyclingList/myRecyclingList.wxml-->
 
-<view id='tabs' style="padding:0px 10px;background-color:#f5f5f5;overflow: auto;">
+<view id='tabs' style="">
   <view class='tabs-box'>
     <block wx:for="{{['全部','处理中','交易完成']}}" wx:key="index">
       <view class="tabs-item {{currentTabIndex == index ? 'selected' : '' }}" bindtap='onTabsItemTap' data-index='{{index}}'>
@@ -8,8 +8,8 @@
       </view>
     </block>
   </view>
-  <view class='ordert-detail' >
-    <view hidden='{{currentTabIndex != 0}}'>
+  <view class='ordert-detail' style="padding:0px 10px;background-color:#f5f5f5;overflow: auto;">
+    <view hidden='{{currentTabIndex != 0}}' >
       <view class="goods-info">
         <view class="vtu-shopList-image">
           <image src="https://img3.mklimg.com/g1/M00/44/B3/rBBrBluONymAGYMPAAAgeh4Y1kU110.jpg" mode="widthFix"/>
@@ -20,6 +20,7 @@
             <span  >二手冰箱特价，省电，够冻，静音，多功能</span>
           </view>
           <view class="font-ziti">下单时间：2021-05-21 15:01:33</view>
+          <view class="font-ziti">快递号：<text>12222222222222</text></view>
           <view class="font-ziti">当前状态：<text>已发货</text></view>
           <view class="font-ziti">总价：<text class="price">￥300</text></view>
           <view>

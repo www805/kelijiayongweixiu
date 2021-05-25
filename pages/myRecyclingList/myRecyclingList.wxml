@@ -1,34 +1,31 @@
-<!--pages/myRecyclingList/myRecyclingList.wxml-->
-
-<view id='tabs'>
-  <view class='tabs-box'>
-    <block wx:for="{{['全部','处理中','交易完成']}}" wx:key="index">
-      <view class="tabs-item {{currentTabIndex == index ? 'selected' : '' }}" bindtap='onTabsItemTap' data-index='{{index}}'>
-        {{item}}      
-      </view>
-    </block>
-  </view>
-  <view class='ordert-detail'>
-    <view hidden='{{currentTabIndex != 0}}'>页面1<image src="/assets/image/empty.png" /></view>
-    <view hidden='{{currentTabIndex != 1}}'>页面2
-      
+<view id='topBar'>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 0 ? "selected" : ""}}' data-mystatus="0">待我审批</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 1 ? "selected" : ""}}' data-mystatus="1">我已审批</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 2 ? "selected" : ""}}' data-mystatus="2">已被退回</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 9 ? "selected" : ""}}' data-mystatus="9">全部信息</text>
+</view>
+<view wx:for="{{array}}" wx:key="ID" data-id="{{item.ID}}" bindtap="itemTap" class='list'>
+  <view class="goods-info">
+    <view class="vtu-shopList-image">
+      <image src="https://img3.mklimg.com/g1/M00/44/B3/rBBrBluONymAGYMPAAAgeh4Y1kU110.jpg" mode="widthFix" />
     </view>
-    <view hidden='{{currentTabIndex != 2}}'>页面3</view>
-    <!-- <view hidden='{{currentTabIndex != 3}}'>页面4</view> -->
+    <view class="vtu-shopList-center">
+      <view class="vtu-shopList-label">
+        <span class="bg-red">自营</span>
+        <span>{{item.title}}</span>
+      </view>
+      <view class="font-ziti">下单时间：2021-05-21 15:01:33</view>
+      <view class="font-ziti">快递号：<text>12222222222222</text></view>
+      <view class="font-ziti">当前状态：<text>已发货</text></view>
+      <view class="font-ziti">总价：<text class="price">￥300</text></view>
+      <view>
+        <text class="btn-red">确认收货</text>
+      </view>
+    </view>
+    <!-- <view class="vtu-shopList-price">
+          <view class="vtu-shopList-price-d">￥<font>299.80</font></view>
+          <view class="vtu-shopList-price-s">￥599</view>
+        </view> -->
   </view>
 </view>
-<!-- badge="hot" -->
-<!-- <vtu-tabs value="{{value2}}" bind:change="change" fixed="{{tabFixed}}" bg-color="#fff" fixed-top="{{tabFixed?navBarHeight:0}}">
-
-  <vtu-tab label="估价商品" name="name1" custom-class="style-content" >
-    <vtu-empty src="/assets/image/empty.png" imageTop="380px" fill label="没有更多数据了~" describe="当前搜索的数据为空，请重新搜索" ></vtu-empty>
-  </vtu-tab>
-  <vtu-tab label="交易完成" name="name2" custom-class="style-content" >
-    <vtu-empty src="/assets/image/empty2.png" imageTop="380px" imageWidth="100px" fill label="您还没有登录~">
-  <vtu-btn type="primary" inlineBlock open-type="getUserInfo">立即登录</vtu-btn>
-</vtu-empty>
-  </vtu-tab>
-  <vtu-tab label="全部" name="name3" custom-class="style-content">
-    <vtu-empty icon="iconfont icon-kong" fill-screen icon-color="orange" icon-size="50px" label="空空如也~"></vtu-empty>
-  </vtu-tab>
-</vtu-tabs> -->
+<view class='{{loadClass}}' bindtap='retry'>{{loadText}}</view>
