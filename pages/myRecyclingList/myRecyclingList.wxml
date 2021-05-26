@@ -1,8 +1,7 @@
 <view id='topBar'>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 0 ? "selected" : ""}}' data-mystatus="0">待我审批</text>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 1 ? "selected" : ""}}' data-mystatus="1">我已审批</text>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 2 ? "selected" : ""}}' data-mystatus="2">已被退回</text>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 9 ? "selected" : ""}}' data-mystatus="9">全部信息</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 0 ? "selected" : ""}}' data-mystatus="0">全部</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 1 ? "selected" : ""}}' data-mystatus="1">处理中</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 2 ? "selected" : ""}}' data-mystatus="2">交易完成</text>
 </view>
 <view wx:for="{{array}}" wx:key="ID" data-id="{{item.ID}}" bindtap="itemTap" class='list'>
   <view class="goods-info">
@@ -12,7 +11,7 @@
     <view class="vtu-shopList-center">
       <view class="vtu-shopList-label">
         <span class="bg-red">自营</span>
-        <span>{{item.title}}</span>
+        <span class="item-title">{{item.title}}</span>
       </view>
       <view class="font-ziti">下单时间：2021-05-21 15:01:33</view>
       <view class="font-ziti">快递号：<text>12222222222222</text></view>
@@ -29,3 +28,4 @@
   </view>
 </view>
 <view class='{{loadClass}}' bindtap='retry'>{{loadText}}</view>
+<view class='gotop' hidden='{{!floorstatus}}' bindtap="goTop">顶部</view>

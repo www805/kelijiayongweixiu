@@ -4,7 +4,8 @@ Page({
         page: 1,
         pageSize: 50,
         array: [],
-        MyStatus: 0
+        MyStatus: 0,
+        scrollTop: 0,
     },
     onLoad: function (e) {
         this.loadData();
@@ -44,5 +45,25 @@ Page({
         app.loadData(this, 'http://127.0.0.1:8080/laoshu', {
             MyStatus: this.data.MyStatus
         });
-    }
+    },
+    onPageScroll(e) {
+        this.setData({
+            scrollTop: e.scrollTop
+        })
+        if (e.scrollTop > 100) {
+            this.setData({
+              floorstatus: true
+            });
+          } else {
+            this.setData({
+              floorstatus: false
+            });
+          }
+      },
+      goTop:function(){
+        wx.pageScrollTo({
+          scrollTop: 0,
+          duration: 300
+        })
+      }
 });

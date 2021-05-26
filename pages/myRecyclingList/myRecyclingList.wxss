@@ -2,6 +2,10 @@
 
 page {
   padding-top: 96rpx;
+  background: #eee;
+  color: #151516;
+  font-size: 32rpx;
+  font-family: Arial, Helvetica, sans-serif;
 }
 #topBar {
   position: fixed;
@@ -19,8 +23,8 @@ page {
   color: #58595b;
 }
 #topBar text.selected {
-  color: #e02e24;
-  border-bottom-color: #e02e24;
+  color: rgb(25, 137, 250);
+  border-bottom-color: rgb(25, 137, 250);
 }
 .list {
   background: #fff;
@@ -32,7 +36,7 @@ page {
 }
 .list .a text {
   float: right;
-  color: #e13127;
+  color: rgb(25, 137, 250);
 }
 .list .b {
   padding: 10rpx 22rpx;
@@ -50,7 +54,7 @@ page {
   border-left: #ededed 1rpx solid;
 }
 .list .c text.highlight {
-  color: #e13127;
+  color: rgb(25, 137, 250);
 }
 text.half {
   display: inline-block;
@@ -94,6 +98,8 @@ text.half {
   background: orange;
   padding: 5px 10px;
   float: right;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
 .font-ziti{
@@ -107,9 +113,29 @@ text.half {
   font-weight: bold;
 }
 
+.item-title{
+  font-size: 14px;
+}
+
 .vtu-shopList-image image {
   border-radius: 5px;
 }
 .vtu-shopList-center {
   padding-bottom: 0px;
+  width: 100%;
 }
+
+.gotop{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  background-color:  rgba(0,0,0,.3);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+ }
+
