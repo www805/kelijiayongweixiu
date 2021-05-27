@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -87,6 +88,18 @@
         {
           "name": "pages/myBuyList/myBuyList",
           "pathName": "pages/myBuyList/myBuyList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/jobList/jobList",
+          "pathName": "pages/jobList/jobList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/postProduct/postProduct",
+          "pathName": "pages/postProduct/postProduct",
           "scene": null
         }
       ]

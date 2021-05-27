@@ -17,7 +17,7 @@ page {
 #topBar text {
   flex: 1;
   text-align: center;
-  border-bottom: #d2d2d2 1rpx solid;
+  border-bottom: #d2d2d2 5rpx solid;
   height: 80rpx;
   line-height: 80rpx;
   color: #58595b;
@@ -32,7 +32,7 @@ page {
 }
 .list .a {
   padding: 22rpx;
-  border-bottom: #ededed 1rpx solid;
+  border-bottom: #ededed 5rpx solid;
 }
 .list .a text {
   float: right;

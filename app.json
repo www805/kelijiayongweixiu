@@ -12,7 +12,9 @@
     "pages/goods/goods",
     "pages/purchase/purchase",
     "pages/myRecyclingList/myRecyclingList",
-    "pages/myBuyList/myBuyList"
+    "pages/myBuyList/myBuyList",
+    "pages/postProduct/postProduct",
+    "pages/jobList/jobList"
   ],
   "window": {
     "backgroundTextStyle": "light",

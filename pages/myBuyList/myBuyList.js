@@ -96,7 +96,7 @@ Page({
   },
   itemTap: function (e) {
     wx.navigateTo({
-      url: 'detail?id=' + e.currentTarget.dataset.id
+      url: '/pages/goods/goods?id=' + e.currentTarget.dataset.id
     });
   },
   loadData: function () {

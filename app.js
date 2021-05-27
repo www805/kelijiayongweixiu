@@ -52,7 +52,7 @@ App({
             array: that.data.array.concat(res.data.list),
             total: res.data.Total
           });
-          if (res.data.Total == 0) {
+          if (res.data.total == 0) {
             that.setData({
               loadText: '没有相关信息',
               loadClass: 'loadTip big icon i-info'

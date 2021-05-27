@@ -31,7 +31,9 @@
 <template name="title_style3">
   <view class="vtu-title3">
     <view class="vtu-title3-label">{{title}}</view>
-    <view class="vtu-title3-desc">{{right}}</view>
+    <view class="vtu-title3-desc">
+      <navigator url="{{url}}" >{{right}}</navigator >
+    </view>
   </view>
 </template>
 <template name="title_style4">

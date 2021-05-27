@@ -1,7 +1,10 @@
+<!--pages/jobList/jobList.wxml-->
+
 <view id='topBar'>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 0 ? "selected" : ""}}' data-mystatus="0">全部</text>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 1 ? "selected" : ""}}' data-mystatus="1">处理中</text>
-  <text bindtap="changeMyStatus" class='{{MyStatus == 2 ? "selected" : ""}}' data-mystatus="2">交易完成</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 0 ? "selected" : ""}}' data-mystatus="0">待报价</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 1 ? "selected" : ""}}' data-mystatus="1">修理中</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 2 ? "selected" : ""}}' data-mystatus="2">修理完成</text>
+  <text bindtap="changeMyStatus" class='{{MyStatus == 3 ? "selected" : ""}}' data-mystatus="3">全部</text>
 </view>
 <view wx:for="{{array}}" wx:key="ID" data-id="{{item.ID}}" bindtap="itemTap" class='list'>
   <view class="goods-info">
@@ -29,3 +32,4 @@
 </view>
 <view class='{{loadClass}}' bindtap='retry'>{{loadText}}</view>
 <view class='gotop' hidden='{{!floorstatus}}' bindtap="goTop">顶部</view>
+
