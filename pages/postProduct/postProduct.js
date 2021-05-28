@@ -56,44 +56,9 @@ Page({
 
   },
 
-  getAddrss(){
-    // wx.getLocation({
-    //   //定位类型 wgs84, gcj02
-    //   // wgs84 返回 gps 坐标，gcj02 返回可用于wx.openLocation的坐标
-    //     type: 'gcj02',
-    //     //获取位置成功
-    //     success: function (res) {
-    //       console.log(res)  //获取的的当前位置的详细信息
-    //     },
-    //     //获取位置失败
-    //     fail: function (err) {
-    //       console.log("获取位置信息失败，请返回重试")
-    //     },
-    //     //接口调用结束的回调函数（调用成功、失败都会执行）
-    //     complete: function (info) {
-    //       console.log("完成")
-    //     },
-    //   })
-
-
-    var that = this;
-    wx.chooseLocation({
-      success: function (res) {
-        console.log(res);
-        // success
-        if (res.address != '') {
-          console.log('用户选择的位置：' + res.address);
-          that.setData({
-            useraddress: res.address
-          })
-        }      
-      },
-      fail: function () {
-      },
-      complete: function () {
-      }
-    })
-  
+  getLables(){
+    //新增多一个输入框
+    
   },  
 
   onChange(e) {

@@ -3,21 +3,25 @@ label {
   min-width: 140rpx;
   text-align: left;
   font-size: 31rpx;
-  
-}
-.page-body{
-  margin: 15rpx ;
+
 }
 
-form{
+.page-body {
+  margin: 15rpx;
+}
+
+form {
   width: 100%;
 }
-.form-body{
+
+.form-body {
   margin: 40rpx 35rpx;
   padding: 30rpx;
   background-color: #f0f0f0;
   border-radius: 10rpx;
 }
-.weui-cell__hd{
+
+.weui-cell__hd {
   margin-right: 45rpx;
 }
+
