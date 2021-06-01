@@ -15,29 +15,15 @@ Page({
   },
 
   data: {
-    value1: [],
-    imgList:[
-      {
-        url: "https://activity.vtuzx.com/doc/vtuui/weapp/avatar/1.png"
-      },
-      {
-        url: "https://activity.vtuzx.com/doc/vtuui/weapp/avatar/2.png"
-      },
-      {
-        url: "https://activity.vtuzx.com/doc/vtuui/weapp/avatar/3.png"
-      }
-    ],
-    items: [
-      {value: 1, name: '上门'},
-      {value: 2, name: '邮寄'},
-      {value: 3, name: '到店', checked: 'true'}
-    ],
-    useraddress:'',
-    radioValue: 0,
-    address: app.globalData.dpAddress,
-    displayValue1: '请选择',
-    lang: 'zh_CN',
-    yuyuemindate: '2021-01-01 00:00:00'
+    imgList:[],
+    productTitle: "",
+    originalPrice: "",
+    price: "",
+    inputList:[""],
+    inputIndex: 0,
+    inputKey:0,
+    ziying: true,
+    miaoshu: ""
   },
   radioChange(e) {
     // console.log('radio发生change事件，携带value值为：', e.detail.value)
@@ -52,14 +38,29 @@ Page({
       radioValue: e.detail.value
     })
 
-    
-
   },
 
-  getLables(){
+  addLables(){
     //新增多一个输入框
-    
+    const inputList = this.data.inputList;
+    inputList.push("");
+    this.setData({
+      inputList: inputList,
+    })
   },  
+  delLables(){
+    const inputList = this.data.inputList;
+    inputList.pop(); //实质是删除lists数组内容，使for循环少一次
+    this.setData({
+      inputList: inputList,
+    })
+  },
+  ziyingBindchange(){
+    const ziying = this.data.ziying;
+    this.setData({
+      ziying: !ziying,
+    })
+  },
 
   onChange(e) {
     // console.log(e)

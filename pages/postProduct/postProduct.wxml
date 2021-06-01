@@ -1,30 +1,38 @@
 <view class="page-body">
   <form catchsubmit="formSubmit" catchreset="formReset">
     <vtu-input-group >
-      
 
       <view style="padding:20rpx">
         <vtu-imgPicker count="9" list="{{imgList}}"> </vtu-imgPicker>
       </view>
 
-      <vtu-input title="商品标题" must  placeholder="请输入商品标题" message="商品标题不能为空！error" status="" value="" type="input" text-align="left" ></vtu-input>
+      <vtu-input title="商品标题" must  placeholder="请输入商品标题" message="商品标题不能为空！error" status="" value="{{productTitle}}" type="input" text-align="left" ></vtu-input>
 
-      <vtu-input title="价格" must placeholder="请输入价格" value="" type="input" text-align="left" input-type="digit">
+      <vtu-input title="价格" must placeholder="请输入价格" value="{{price}}" type="input" text-align="left" input-type="digit">
         <view slot="after">元</view>
       </vtu-input>
-      <vtu-input title="原价" placeholder="请输入价格" value="" type="input" text-align="left" input-type="digit">
+      <vtu-input title="原价" placeholder="请输入原价" value="{{originalPrice}}" type="input" text-align="left" input-type="digit">
         <view slot="after">元</view>
       </vtu-input>
       
       <vtu-input-group id="lables_id">
-        <vtu-input title="特价标签" border text-align="left" value="" type="input" placeholder="请填写特价标签"  value="{{useraddress}}" style="text-align:right;">
+        <vtu-input wx:for="{{inputList}}" wx:key="inputKey" wx:for-index="inputIndex" title="特价标签{{inputIndex+1}}" border text-align="left" value="" type="input" placeholder="请填写特价标签"  value="" style="text-align:right;">
           <button type="primary" 
-            catch:tap="getLables" 
-            style="width:180rpx;height:70rpx;font-size:30rpx;line-height:70rpx;padding:0px 0px 0px 0px;">添加标签</button>
+            catch:tap="addLables" 
+            wx:if="{{inputIndex==0}}"
+            style="width:180rpx;height:70rpx;font-size:30rpx;line-height:70rpx;padding:0;">添加标签</button>
+          <button type="warn" 
+          catch:tap="delLables" 
+          wx:if="{{inputIndex > 0}}"
+          style="width:180rpx;height:70rpx;font-size:30rpx;line-height:70rpx;padding:0;color: #fff;background-color: #e64340;">删除标签</button>
         </vtu-input>
       </vtu-input-group>
 
-      <vtu-input must border placeholder="请填写商品描述" value="" type="textarea" text-align="left" text-height="100px" show-max-label="{{true}}" maxlength="1000" >
+      <vtu-input title="是否使用自营标记" border>
+        <vtu-switch slot="after" checked="{{ziying}}" size="small" bind:change="ziyingBindchange"></vtu-switch>
+      </vtu-input>
+  
+      <vtu-input must border placeholder="请填写商品描述" value="{{miaoshu}}" type="textarea" text-align="left" text-height="100px" show-max-label="{{true}}" maxlength="1000" >
       </vtu-input>
 
     </vtu-input-group>

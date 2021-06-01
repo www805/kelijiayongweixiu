@@ -41,15 +41,7 @@
   background-color: green;
 }
 
-#btnBlock{
-  width: 850rpx !important;
-  margin-left: 160rpx;
-}
 
-#btnid button {
-  width: 350rpx !important;
-  margin:10rpx;
-}
 
 .zt_jc{
   margin: 5px 5px;
@@ -122,4 +114,29 @@ margin-top: 10px;
 font-size: 15px;
 padding-bottom: 10px;
 border-bottom: 1px solid #eee;
+}
+
+
+.btnBlock{
+  /* width: 850rpx !important; */
+  /* margin-left: 20%; */
+}
+
+#btnid button {
+  /* width: 350rpx !important; */
+  margin:10rpx 0;
+}
+
+#btnid{
+  display: -webkit-flex; /* Safari */
+  -webkit-flex-flow: row-reverse wrap; /* Safari 6.1+ */
+  display: flex;
+  /* flex-flow: row-reverse wrap; */
+  justify-content:space-around;
+}
+.one{
+  width: 47%;
+}
+.one button{
+  width: 100% !important;
 }

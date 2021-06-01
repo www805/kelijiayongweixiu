@@ -21,7 +21,7 @@ Page({
     weixiuColorArr:["tag_darkgray","tag_orange","tag_red","tag_LimeGreen","tag_green"],
     describe:'我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了',
     money:'12.00',
-    isweixiu:4, //等待维修1、待确认2、修理中3、待验收4、维修完成5
+    isweixiu:2, //等待维修1、待确认2、修理中3、待验收4、维修完成5
     isState:3, //上门1、邮寄2、到店3
     othadAddress:app.globalData.othadAddress,
     value1: 0
@@ -173,7 +173,7 @@ Page({
   },
   successAlert: function() {
     Dialog().open({
-      content: '确认完成吗？',
+      content: '确认完成维修，并且支付吗？',
       verticalButtons: false,
       buttons: [
         {

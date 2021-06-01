@@ -39,7 +39,7 @@ Page({
     },
     itemTap: function (e) {
         wx.navigateTo({
-            url: '/pages/goods/goods?id=' + e.currentTarget.dataset.id
+            url: '/pages/details/details?id=' + e.currentTarget.dataset.id
         });
     },
     loadData: function () {

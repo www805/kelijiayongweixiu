@@ -7,7 +7,7 @@
     "vtu-radio-prop": "/components/vtu/prop/radio/prop/vtu-radio-prop",
     "vtu-radio-prop-item": "/components/vtu/prop/radio/item/vtu-radio-prop-item",
     "vtu-btn": "/components/vtu/button/vtu-btn",
-
+    "vtu-switch": "/components/vtu/switch/vtu-switch",
     "wux-date-picker": "/components/wux/date-picker/index",
     "wux-cell": "/components/wux/cell/index"
   },

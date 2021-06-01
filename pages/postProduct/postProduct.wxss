@@ -25,3 +25,7 @@ form {
   margin-right: 45rpx;
 }
 
+button[type=warn] {
+  color: #fff;
+  background-color: #e64340;
+}
