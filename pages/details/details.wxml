@@ -1,6 +1,6 @@
 
-<view class="cell_item" wx:if="{{isweixiu == 2}}">
-  请尽快确认修理，倒计时：<text selectable>29:59后结束</text>
+<view class="cell_item time_tishi" wx:if="{{isweixiu == 2}}">
+  请尽快 <text style="font-weight:bold;">确认修理</text>，本单倒计时：<text selectable>29:59后结束</text>
 </view>
 <view class="cell_item">
   维修单号：<text selectable>{{orderid}}</text>
@@ -56,12 +56,13 @@
   </view>
 
   <view id="btnid">
-    <text wx:if="{{isweixiu == 2}}">确认维修，同时支付修理费用，费用会在平台中暂存，如中途退单会自动反还金额</text>
+    <text class="tishibiaoqian" wx:if="{{isweixiu == 2}}">确认维修，同时需要先支付修理费用，费用会在平台中暂存，如中途退单会自动反还金额</text>
     <!-- "等待维修","修理中","待确认","完成维修"  -->
     <vtu-btn class="one" shadow inlineBlock="false" type="danger" bind:click="delAlert" wx:if="{{isweixiu == 1}}" >删除</vtu-btn>
     <vtu-btn class="one" shadow inlineBlock="false" type="primary" wx:if="{{isweixiu == 1}}" bind:tap="gotoEdit">编辑</vtu-btn>
     <vtu-btn shadow type="warning" inlineBlock="true" class="btnBlock" wx:if="{{isweixiu == 2}}" >确认维修</vtu-btn>
     <vtu-btn shadow type="success" inlineBlock="true" class="btnBlock" wx:if="{{isweixiu >= 3}}" bind:tap="successAlert">确认支付</vtu-btn>
+    <vtu-btn shadow type="danger" inlineBlock="true" class="btnBlock" wx:if="{{isweixiu >= 3}}" bind:tap="successTuiDan" >退单</vtu-btn>
     <!-- <vtu-btn shadow type="success" inlineBlock="true" wx:if="{{isweixiu == 3}}" bind:tap="successAlert" >确认完成</vtu-btn>  -->
   </view>
 </view>
@@ -70,9 +71,6 @@
 <view class="heng">
   
 </view>
-1.添加一个编辑功能
-2.报价后不能修改，确认维修
-3.完成支付，退订
 <view class="wenti">
   <view class="zt_jc">问题跟踪</view>
   <view>

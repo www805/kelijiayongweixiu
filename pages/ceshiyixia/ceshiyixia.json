@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "vtu-slide": "/components/vtu/slide/vtu-slide"
+  }
+}

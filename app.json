@@ -14,7 +14,8 @@
     "pages/myRecyclingList/myRecyclingList",
     "pages/myBuyList/myBuyList",
     "pages/postProduct/postProduct",
-    "pages/jobList/jobList"
+    "pages/jobList/jobList",
+    "pages/ceshiyixia/ceshiyixia"
   ],
   "window": {
     "backgroundTextStyle": "light",

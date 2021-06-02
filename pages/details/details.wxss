@@ -140,3 +140,15 @@ border-bottom: 1px solid #eee;
 .one button{
   width: 100% !important;
 }
+.tishibiaoqian{
+  padding: 3px 5px;
+  background-color:rgb(206, 255, 160);
+  color:rgb(0, 196, 49);
+  border-radius: 0.4em;
+}
+.time_tishi{
+  padding: 3px 5px;
+  background-color:rgb(255, 200, 137);
+  color:rgb(221, 4, 4);
+  border-radius: 0.4em;
+}

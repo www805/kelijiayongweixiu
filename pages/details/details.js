@@ -20,8 +20,8 @@ Page({
     weixiuStrArr:["等待修理","待确认","修理中","待验收","维修完成"],
     weixiuColorArr:["tag_darkgray","tag_orange","tag_red","tag_LimeGreen","tag_green"],
     describe:'我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了我的坏了',
-    money:'12.00',
-    isweixiu:2, //等待维修1、待确认2、修理中3、待验收4、维修完成5
+    money:'12.00',//等待报价1、待确认2、修理中3、待验收4、维修完成5
+    isweixiu:2, //等待报价1、待确认2、修理中3、维修完成4
     isState:3, //上门1、邮寄2、到店3
     othadAddress:app.globalData.othadAddress,
     value1: 0
@@ -193,4 +193,19 @@ Page({
       ]
     })
   },
+  successTuiDan: function(){
+    Dialog().open({
+      content: '退单功能维护中，详情请联系客服人员',
+      verticalButtons: false,
+      buttons: [
+        {
+          type: 'success',
+          label: '确认',
+          click: function(e) {
+            Dialog().close()
+          }
+        },
+      ]
+    })
+  }
 })
