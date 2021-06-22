@@ -1,2 +1,14 @@
 <!--pages/ceshiyixia/ceshiyixia.wxml-->
-<text>pages/ceshiyixia/ceshiyixia.wxml</text>
+<!-- <text>pages/ceshiyixia/ceshiyixia.wxml</text> -->
+
+<view class="container">
+	<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+  data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="key"
+  wx:for-item="item" >
+		<view class="content">{{item.content}}</view>
+    <view class="del lan" catchtap="edit" data-index="{{index}}">编辑</view>
+		<view class="del" catchtap="del" data-index="{{index}}">删除</view>
+	</view>
+</view>
+
+
