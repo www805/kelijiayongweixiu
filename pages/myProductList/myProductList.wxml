@@ -1,0 +1,27 @@
+<!--pages/ceshiyixia/ceshiyixia.wxml-->
+<import src="../../components/vtu/template/other/template.wxml"></import>
+<import src="../../components/vtu/template/shop/template.wxml"></import>
+<!-- <text>pages/ceshiyixia/ceshiyixia.wxml</text> -->
+
+<!-- 搜索框 -->
+<vtu-search search-shape="circle" class="search">
+		<vtu-btn slot="append" type="primary" inlineBlock round shadow width="70px" size="small">搜索</vtu-btn> 
+</vtu-search>
+<view class="container">
+	<view class="touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" 
+  data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" wx:for="{{items}}" wx:key="key"
+  wx:for-item="item" >
+		<view class="content">
+			<template is="shopList_style3" data="{{href:'/pages/goods/goods', title:'9成新全自动洗衣机', priced:399.00, prices:899.9, src:'https://pic6.58cdn.com.cn/p1/big/n_v1bl2lwki5546vs6jbkz6a.jpg?w=425&h=320'}}"/>
+		</view>
+    <view class="del lan" catchtap="edit" data-index="{{index}}">编辑</view>
+		<view class="del" catchtap="del" data-index="{{index}}">删除</view>
+	</view>
+
+	
+	<!-- <template wx:for="{{ items }}" wx:key="index" is="shopList_style3" data="{{href:'/pages/goods/goods', title:'9成新美的空调，超省电', priced:499.00, prices:599.9, src:'https://img3.mklimg.com/g1/M00/44/B3/rBBrBluONymAGYMPAAAgeh4Y1kU110.jpg'}}"/> -->
+
+</view>
+
+<view class='{{loadClass}}' bindtap='retry'>{{loadText}}</view>
+<view class='gotop' hidden='{{!floorstatus}}' bindtap="goTop">顶部</view>

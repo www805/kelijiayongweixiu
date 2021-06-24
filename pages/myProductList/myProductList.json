@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "我的发布",
+  "usingComponents": {
+    "vtu-search": "/components/vtu/search/vtu-search",
+    "vtu-panel": "../../components/vtu/panel/vtu-panel",
+    "vtu-cell": "../../components/vtu/cell/item/vtu-cell",
+    "vtu-btn": "../../components/vtu/button/vtu-btn",
+    "vtu-avatar": "../../components/vtu/avatar/vtu-avatar",
+    "wux-filterbar": "../../components/wux/filterbar/index"
+  }
+}

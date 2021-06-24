@@ -15,7 +15,7 @@
     "pages/myBuyList/myBuyList",
     "pages/postProduct/postProduct",
     "pages/jobList/jobList",
-    "pages/ceshiyixia/ceshiyixia"
+    "pages/myProductList/myProductList"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -104,8 +104,8 @@
           "scene": null
         },
         {
-          "name": "pages/ceshiyixia/ceshiyixia",
-          "pathName": "pages/ceshiyixia/ceshiyixia",
+          "name": "pages/myProductList/myProductList",
+          "pathName": "pages/myProductList/myProductList",
           "query": "",
           "scene": null
         }

@@ -1,10 +1,14 @@
 /* pages/ceshiyixia/ceshiyixia.wxss */
+@import "../../assets/icons/ali.wxss";
+@import "../../components/vtu/template/other/template.wxss";
+@import "../../components/vtu/template/shop/template.wxss";
+
 page {
 	background-color: white;
 }
 .container {
 	min-height: 100%;
-	padding: 20rpx 0rpx;
+	padding: 90rpx 0rpx 0rpx 0rpx;
 }
 
 .touch-item {
@@ -43,7 +47,7 @@ page {
 }
 
 .lan{
-  background-color: rgb(81, 81, 255);
+  background-color: rgb(114, 114, 253);
 }
 
 .touch-move-active .content,
@@ -51,3 +55,25 @@ page {
 	-webkit-transform: translateX(0);
 	transform: translateX(0);
 }
+
+.search{
+	position:fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.gotop{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  z-index: 1;
+  background-color:  rgba(0,0,0,.3);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+ }

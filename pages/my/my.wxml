@@ -30,7 +30,7 @@
   <vtu-cell title="我的工作列表" border arrow icon="iconfont icon-wendangxiugai" icon-color="#000"></vtu-cell>
 </navigator>
 <!-- 管理员下 -->
-<navigator url="/pages/postProduct/postProduct">
+<navigator url="/pages/myProductList/myProductList">
   <vtu-cell title="发布二手商品" border arrow icon="iconfont icon-wendangchaxun" icon-color="#000"></vtu-cell>
 </navigator>
 <!-- <vtu-cell title="回收列表" border arrow icon="iconfont icon-jiajutubiao--copy" icon-color="#000"></vtu-cell> -->

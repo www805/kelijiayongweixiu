@@ -1,16 +1,19 @@
 // pages/ceshiyixia/ceshiyixia.js
+var app = getApp();
 Page({
   data: {
     items: [],
     startX: 0, //开始坐标
-    startY: 0
+    startY: 0,
+    count: 0,
+    scrollTop: 0
   },
 
   onLoad: function (e) {
       var that = this;
       //common是自己写的公共JS方法，可忽略
       // common.sys_main(app, that, e);
-      for (var i = 0; i < 10; i++) {
+      for (var i = 0; i < 2; i++) {
         this.data.items.push({
           content: i + " 向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦",
           isTouchMove: false //默认隐藏删除
@@ -19,9 +22,9 @@ Page({
       this.setData({
         items: this.data.items
       });
-    }
 
-    ,
+      
+    },
 
   //手指触摸动作开始 记录起点X坐标
   touchstart: function (e) {
@@ -97,6 +100,88 @@ Page({
     this.data.items.splice(e.currentTarget.dataset.index, 1)
     this.setData({
       items: this.data.items
+    })
+  },
+
+  onPageScroll(e) {
+    this.setData({
+        scrollTop: e.scrollTop
+    })
+    if (e.scrollTop > 100) {
+        this.setData({
+          floorstatus: true
+        });
+      } else {
+        this.setData({
+          floorstatus: false
+        });
+      }
+  },
+  onPulling() {
+      console.log('onPulling')
+  },
+  onRefresh() {
+      console.log('onRefresh')
+
+      this.setData({ count: 10 })
+
+      setTimeout(() => {
+          this.setData({ items: getList() })
+          $stopWuxRefresher()
+      }, 100)
+  },
+  onLoadmore() {
+      console.log('onLoadmore')
+      setTimeout(() => {
+          this.setData({
+              items: [...this.data.items, ...getList(10, this.data.count)],
+              count: this.data.count + 10,
+          })
+
+          if (this.data.items.length < 30) {
+              $stopWuxLoader()
+          } else {
+              console.log('没有更多数据')
+              $stopWuxLoader('#wux-refresher', this, true)
+          }
+      }, 3000)
+  },
+
+  /**
+   * 页面上拉触底事件的处理函数
+   */
+  onReachBottom: function () {
+    if (this.data.loadText == '上滑加载更多') {
+      this.loadData();
+    }
+  },
+  
+  changeMyStatus: function (e) {
+    this.setData({
+      page: 1,
+      array: [],
+      MyStatus: e.target.dataset.mystatus
+    });
+    this.loadData();
+  },
+  retry: function (e) {
+    if (this.data.loadText == '加载失败，点此重试') {
+      this.loadData();
+    }
+  },
+  itemTap: function (e) {
+    wx.navigateTo({
+      url: '/pages/goods/goods?id=' + e.currentTarget.dataset.id
+    });
+  },
+  loadData: function () {
+    
+  },
+  
+  goTop:function(){
+    wx.pageScrollTo({
+      scrollTop: 0,
+      duration: 300
     })
   }
 })

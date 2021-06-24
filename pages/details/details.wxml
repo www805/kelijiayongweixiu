@@ -1,6 +1,6 @@
 
 <view class="cell_item time_tishi" wx:if="{{isweixiu == 2}}">
-  请尽快 <text style="font-weight:bold;">确认修理</text>，本单倒计时：<text selectable>29:59后结束</text>
+  请尽快<text style="font-weight:bold;">确认修理</text>，本单倒计时：<text selectable>29:59后结束</text>
 </view>
 <view class="cell_item">
   维修单号：<text selectable>{{orderid}}</text>
