@@ -25,4 +25,5 @@
     </view>
   </wux-refresher>
 </view>
+
 <view class='gotop' hidden='{{!floorstatus}}' bindtap="goTop">顶部</view>

@@ -25,3 +25,4 @@
 
 <view class='{{loadClass}}' bindtap='retry'>{{loadText}}</view>
 <view class='gotop' hidden='{{!floorstatus}}' bindtap="goTop">顶部</view>
+<view class='fabubtn'  bindtap="fabubtn">发布</view>

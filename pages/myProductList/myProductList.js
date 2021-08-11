@@ -13,7 +13,7 @@ Page({
       var that = this;
       //common是自己写的公共JS方法，可忽略
       // common.sys_main(app, that, e);
-      for (var i = 0; i < 2; i++) {
+      for (var i = 0; i < 20; i++) {
         this.data.items.push({
           content: i + " 向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦,向左滑动删除哦",
           isTouchMove: false //默认隐藏删除
@@ -183,5 +183,11 @@ Page({
       scrollTop: 0,
       duration: 300
     })
+  },
+
+  fabubtn:function(){
+    wx.navigateTo({
+      url: '/pages/postProduct/postProduct'
+    });
   }
 })
